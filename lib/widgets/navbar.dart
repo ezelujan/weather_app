@@ -127,14 +127,14 @@ class _NavBarState extends State<NavBar> {
   List<String> listOfStrings = [
     'Home',
     'Favorite',
-    'Account',
+    'Search',
     'Settings',
   ];
 
   List<IconData> listOfIcons = [
     Icons.home_rounded,
     Icons.favorite_rounded,
-    Icons.person_rounded,
+    Icons.search_outlined,
     Icons.settings_rounded,
   ];
 }
