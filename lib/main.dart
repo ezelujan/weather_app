@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'navbar.dart';
+import 'home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,21 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('¡Bienvenido!'),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: Text(
-            'Hello',
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-        ),
-        bottomNavigationBar: const NavBar(),
+      home: const Scaffold(
+        body: Home(),
+        bottomNavigationBar: NavBar(),
       ),
     );
   }
