@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/temperature/ui/widgets/degree.dart';
 import '../widgets/weather_info.dart';
+import '../widgets/coming_forecast.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,6 +20,10 @@ class Home extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
           child: const WeatherInfo(),
+        ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 30),
+          child: const ComingForecast(),
         ),
       ],
     );
