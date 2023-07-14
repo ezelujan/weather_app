@@ -24,7 +24,7 @@ class WeatherItem extends StatelessWidget {
         vertical: 25,
       ),
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(255, 255, 255, .8),
+        color: const Color.fromRGBO(255, 255, 255, .6),
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
@@ -50,7 +50,7 @@ class WeatherItem extends StatelessWidget {
                 title,
                 style: const TextStyle(
                   fontSize: 12,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
                   color: Color.fromRGBO(0, 0, 0, .5),
                 ),
               ),

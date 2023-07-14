@@ -15,9 +15,10 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: displayWidth * .05,
-        vertical: displayWidth * .07,
+      margin: EdgeInsets.only(
+        left: displayWidth * .05,
+        right: displayWidth * .05,
+        bottom: displayWidth * .07,
       ),
       height: displayWidth * .155,
       decoration: BoxDecoration(
