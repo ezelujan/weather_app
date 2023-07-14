@@ -16,7 +16,7 @@ class Degree extends StatelessWidget {
             ? Icons.wb_cloudy_outlined
             : Icons.wb_sunny_outlined;
 
-    return Column(
+    final degreeColumn = Column(
       children: [
         Icon(
           icon,
@@ -39,6 +39,26 @@ class Degree extends StatelessWidget {
             color: Color.fromRGBO(0, 0, 0, .5),
           ),
         ),
+      ],
+    );
+
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        Container(
+          width: 200,
+          height: 200,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: color.withOpacity(.2),
+                blurRadius: 100,
+                spreadRadius: 40,
+              ),
+            ],
+          ),
+        ),
+        degreeColumn,
       ],
     );
   }
