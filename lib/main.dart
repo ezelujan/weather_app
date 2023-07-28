@@ -7,13 +7,22 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
+  int indexTap = 0;
+
+  final List<Widget> widgetsChildren = [
+    const Home(),
+    const Text('Favorite'),
+    const Text('Search'),
+    const Text('Settings'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,10 +31,10 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: const Scaffold(
+      home: Scaffold(
         extendBody: true,
-        body: Home(),
-        bottomNavigationBar: NavBar(),
+        body: widgetsChildren[indexTap],
+        bottomNavigationBar: NavBar(indexTap: indexTap),
       ),
     );
   }
